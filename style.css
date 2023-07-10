@@ -6,9 +6,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     color: #fff;
-    text-shadow: 1.5px 1.5px #000;
+    text-shadow: 1.2px 1.2px #000;
     /* text-transform: uppercase; */
 }
 
@@ -88,9 +88,9 @@ main > section#Second {
     flex-grow: .5;
 } 
 
-/* main > section#Second > p.id_1 {
-    
-} */
+main > section#Second > p.id_1 {   
+    font-size: 15px;   
+}
 
 main > section#Second > p.noivos {
     font-family: 'Great Vibes', sans-serif;
@@ -100,7 +100,7 @@ main > section#Second > p.noivos {
 
 main > section#Second > div.date {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,14 +109,14 @@ main > section#Second > div.date {
 
 main > section#Second > div.date > div {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     width: 100%;
 }
 
 main > section#Second > div.date > div > span {
-    width: 20px; /* Largura do quadrado */
+    width: 10px; /* Largura do quadrado */
     height: 50px; /* Altura do quadrado */
     background-color: #fff; /* Cor do quadrado */
     transform: perspective(500px) rotateY(70deg); /* Perspectiva e inclinação */
@@ -124,16 +124,17 @@ main > section#Second > div.date > div > span {
 
 main > section#Second > div.date > div > p {
     text-align: center;
+    font-size: 15px;
 }
 
 main > section#Second > div.date > p {
-    font-size: 18px;
     margin-left: 15px;
     /* text-align: center; */
+    font-size: 15px;
 }
 
 main > section#Second > p.versiculo {
-    margin: 20px 20px;
+    margin: 20px 40px;
     text-align: justify;
 }
 
