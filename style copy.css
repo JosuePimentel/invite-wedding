@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
 
 * {
     padding: 0;
@@ -55,17 +56,22 @@ main > section#First > p{
     font-size: 2em;
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Old Standard TT', sans-serif;
 }
 
 main > section#First > div {
     display: flex;
-    gap: 25px;
+    gap: 5px;
     align-items: center;
 }
 
 main > section#First > div > p {
     font-size: 1.3em;
     line-height: 25px;
+}
+
+main > section#First > div > p:nth-child(1) {
+    text-align: right;
 }
 
 main > section#Second {
@@ -77,6 +83,7 @@ main > section#Second {
 
 main > section#Second > p.id_1 {   
     font-size: 20px;   
+    font-family: 'Old Standard TT', sans-serif;
 }
 
 main > section#Second > p.noivos {
@@ -123,7 +130,7 @@ main > section#Second > div.date > p {
 main > section#Second > p.versiculo {
     margin: 20px 40px;
     text-align: justify;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 main > section#Second > p.versiculo > span {
@@ -146,12 +153,16 @@ main > section#Third {
     flex-grow: 1;
 }
 
-main > section#Third > a > span.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 10000000,
-  'GRAD' 0,
-  'opsz' 10
+main > section#Third > div {
+    text-align: center;
+}
+
+main > section#Third > div > a {
+    font-size: 30px;
+}
+
+main > section#Third > div > a:hover {
+    color: #a1a1a1;
 }
 
 a {
