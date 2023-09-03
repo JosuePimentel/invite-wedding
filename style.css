@@ -41,6 +41,7 @@ main.clicked {
     width: 100px;
     background-color: #fff;
     color: #000;
+    font-weight: 600;
     border-radius: 10px;
     content: 'Click na foto!';
     display: block;
@@ -69,7 +70,7 @@ main > section#First {
 
 main > section#First > p{
     padding: 0 30px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: center;
     margin-bottom: 20px;
     font-family: 'Old Standard TT', sans-serif;
@@ -159,7 +160,7 @@ main > section#Second > p.versiculo > span {
 main > section#Third {
     /* flex-grow: .3; */
     width: 100%;
-    padding: 15px 0 0;
+    padding: 40px 0 0;
     min-height: 30px;
     display: flex;
     justify-content: center;
