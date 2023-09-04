@@ -52,7 +52,7 @@ function addHTML(item, index) {
 
     ul.append(li)
 }
-    
+
 function convidados(ele) {
     const div_inputs = document.querySelector("[inputs]")
     const div_convites = document.querySelector("div.convites")
@@ -61,7 +61,7 @@ function convidados(ele) {
     form.innerHTML = ""
     const index_ele = ele.getAttribute("index")
     ul.innerHTML = ""
-    addHTML(conv[index_ele].nome, index_ele)
+    addHTML(conv[index_ele], index_ele)
 
     const p = document.createElement("p")
     p.innerText = `Você tem ${conv[index_ele].convites}:`
@@ -101,7 +101,7 @@ function convidados(ele) {
 // https://wa.me/5564981721535?text=
 
 function conf_whats(index) {
-    let str = "https://wa.me/5564981721535?text="
+    let str = "https://wa.me/5564981120169?text="
     str = str.concat(`${conv[index].nome} confirmou a presença e levará consigo os seguintes convidados:\n`)
 
     for( let i = 0 ; i < conv[index].convites ; i++ ) {
