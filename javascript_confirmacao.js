@@ -1,13 +1,12 @@
-// alert("Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique o seu nome.\nPasso 3: Insira o nome e pelo menos um sobrenome dos seus convidados.")
-// Swal.fire({
-//     title: "Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique o seu nome.\nPasso 3: Insira o nome e pelo menos um sobrenome dos seus convidados.",
-//     showClass: {
-//       popup: 'animate__animated animate__fadeInDown'
-//     },
-//     hideClass: {
-//       popup: 'animate__animated animate__fadeOutUp'
-//     }
-// })
+Swal.fire({
+    title: "Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique no seu nome.\nPasso 3: Insira o nome e pelo menos um sobrenome dos seus convidados.\nPasso 4: Clique em 'Confirmar!' para confirmar a sua presença e a de seus convidados.",
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+})
 
 const conv = new Array
 
@@ -30,43 +29,36 @@ inputSearch.oninput = () => {
 
     conv
         .filter(item => item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
-        .forEach((item, index) => addHTML(item, index))
+        .forEach(item => addHTML(item))
 
 }
 
-function addHTML(item, index) {
+function addHTML(item) {
     const li = document.createElement("li")
     const a = document.createElement("a")
-    a.setAttribute("index", index)
+    a.setAttribute("index", item.index)
     a.innerText = item.nome
     a.addEventListener("click", e => {
-        convidados(e.target)
+        convidados(item)
     })
     li.append(a)
-    // for(let i = 0 ; i < item.convites ; i++) {
-    //     const span = document.createElement("span")
-    //     span.classList.add("material-symbols-outlined")
-    //     span.innerText = "local_activity"
-    //     li.append(span)
-    // }
-
     ul.append(li)
 }
 
+const div_inputs = document.querySelector("[inputs]")
+const div_convites = document.querySelector("div.convites")
+const form = document.querySelector("form")
+
 function convidados(ele) {
-    const div_inputs = document.querySelector("[inputs]")
-    const div_convites = document.querySelector("div.convites")
     div_convites.innerHTML = ""
-    const form = document.querySelector("form")
     form.innerHTML = ""
-    const index_ele = ele.getAttribute("index")
     ul.innerHTML = ""
-    addHTML(conv[index_ele], index_ele)
+    addHTML(ele)
 
     const p = document.createElement("p")
-    p.innerText = `Você tem ${conv[index_ele].convites}:`
+    p.innerText = `Você tem ${ele.convites} convites:`
     div_convites.append(p)
-    for( let i = 0 ; i < conv[index_ele].convites ; i++ ) {
+    for( let i = 0 ; i < ele.convites ; i++ ) {
             const span = document.createElement("span")
             span.classList.add("material-symbols-outlined")
             span.innerText = "local_activity"
@@ -74,7 +66,7 @@ function convidados(ele) {
 
             const input = document.createElement("input")
             input.setAttribute("type", "text")
-            input.setAttribute("name", i)
+            input.setAttribute("name", i+1)
             input.setAttribute("id", i+1)
             input.setAttribute("placeholder", `Convidado 0${i+1}`)
             form.append(input)
@@ -87,12 +79,12 @@ function convidados(ele) {
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Presença confirmada com sucesso.\n\nVocê Sera redirecionado ao convite em alguns segundos!',
+            title: 'Presença confirmada com sucesso.\n\nVocê sera redirecionado ao whatsapp em segundos!',
             showConfirmButton: false,
-            timer: 3500
+            timer: 5000
           })
 
-        conf_whats(index_ele)
+        conf_whats(ele)
     })
     form.append(submit)
     div_inputs.classList.toggle("clicked")
@@ -100,20 +92,21 @@ function convidados(ele) {
 
 // https://wa.me/5564981721535?text=
 
-function conf_whats(index) {
+function conf_whats(ele) {
     let str = "https://wa.me/5564981120169?text="
-    str = str.concat(`${conv[index].nome} confirmou a presença e levará consigo os seguintes convidados:\n`)
-
-    for( let i = 0 ; i < conv[index].convites ; i++ ) {
+    str = str.concat(`${ele.nome} confirmou a presença e levará consigo os seguintes convidados: `)
+    for( let i = 0 ; i < ele.convites ; i++ ) {
         let val = document.getElementById(`${i+1}`).value
-        if(i != conv[index].convites-1) {
+        if(i <= ele.convites-2) {
             str = str.concat(val)
-            str = str.concat(",")
+            str = str.concat(", ")
         }else {
-            str = str.concat(" e ")
+            str = str.concat("e ")
             str = str.concat(val)
         }
     }
 
-    window.location.href = str
+    setTimeout(() => {
+        window.location.href = str
+    }, 5050);
 }
