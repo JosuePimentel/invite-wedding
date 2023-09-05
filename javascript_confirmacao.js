@@ -87,7 +87,7 @@ function convidados(ele) {
         conf_whats(ele)
     })
     form.append(submit)
-    div_inputs.classList.toggle("clicked")
+    div_inputs.classList.add("clicked")
 }
 
 // https://wa.me/5564981721535?text=
@@ -97,7 +97,7 @@ function conf_whats(ele) {
     str = str.concat(`${ele.nome} confirmou a presença e levará consigo os seguintes convidados: `)
     for( let i = 0 ; i < ele.convites ; i++ ) {
         let val = document.getElementById(`${i+1}`).value
-        if(i <= ele.convites-2) {
+        if(i <= ele.convites-1) {
             str = str.concat(val)
             str = str.concat(", ")
         }else {
