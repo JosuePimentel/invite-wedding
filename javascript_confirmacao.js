@@ -69,6 +69,9 @@ function convidados(ele) {
             input.setAttribute("name", i+1)
             input.setAttribute("id", i+1)
             input.setAttribute("placeholder", `Convidado 0${i+1}`)
+            if(i == 0) {
+                input.value = ele.nome
+            }
             form.append(input)
     }
     const submit = document.createElement("input")
@@ -94,17 +97,28 @@ function convidados(ele) {
 
 function conf_whats(ele) {
     let str = "https://wa.me/5564981120169?text="
-    str = str.concat(`${ele.nome} confirmou a presença e levará consigo os seguintes convidados: `)
+    let strCPY = ""
+    let aux = 0
     for( let i = 0 ; i < ele.convites ; i++ ) {
         let val = document.getElementById(`${i+1}`).value
-        if(i <= ele.convites-1) {
-            str = str.concat(val)
-            str = str.concat(", ")
-        }else {
-            str = str.concat("e ")
-            str = str.concat(val)
-        }
+        if(!val.includes(ele.nome)) {
+            if(i <= ele.convites-3) {
+                strCPY = strCPY.concat(val, ", ")
+            }else if(ele.convites == 2) {
+                strCPY = strCPY.concat(val)
+            }else {
+                strCPY = strCPY.concat(" e ", val)
+            }
+        } else aux++
     }
+
+    if(aux) {
+        str = str.concat(`${ele.nome} confirmou a presença e levará consigo o(s) seguinte(s) convidado(s): `)
+    } else {
+        str = str.concat(`${ele.nome} não ira, mas confirmou a presença do(s) seguinte(s) convidado(s): `)
+    }
+
+    str = str.concat(strCPY)
 
     setTimeout(() => {
         window.location.href = str
