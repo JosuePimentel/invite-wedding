@@ -1,0 +1,24 @@
+main > section#Third {
+    /* flex-grow: .3; */
+    width: 100%;
+    padding: 5% 0 15px;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 20px;
+    flex-grow: 1;
+}
+
+main > section#Third > div {
+    text-align: center;
+}
+
+main > section#Third > div > a {
+    font-size: 30px;
+}
+
+main > section#Third > div > a:hover {
+    color: #a1a1a1;
+}
+

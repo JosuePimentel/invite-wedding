@@ -1,13 +1,13 @@
 /* Mobile First */
-
 main {
     min-height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    /* justify-content: center; */
+    padding: 20px 0;
+    gap: 30px;
     overflow: hidden;
 
     transform: translate(-10px, -20px);
@@ -61,7 +61,7 @@ main.clicked {
 }
 
 main > section#First {
-    padding: 30px 0;
+    padding: 30px 0 0;
     /* flex-grow:; */
     display: flex;
     flex-direction: column;
@@ -98,8 +98,16 @@ main > section#Second {
     align-items: center;
 } 
 
-main > section#Second > p.id_1 {   
-    font-size: 1.3em;   
+main > section#Second > p#id_1 {
+    font-size: 1.1em;
+}
+
+main > section#Second > p#id_2 {
+    font-size: 1.3em; 
+}
+
+main > section#Second > p#id_2,
+main > section#Second > p#id_1 {     
     font-family: 'Old Standard TT', sans-serif;
 }
 
@@ -158,32 +166,57 @@ main > section#Second > p.versiculo > span {
     text-align: right;
 }
 
-main > section#Third {
-    /* flex-grow: .3; */
-    width: 100%;
-    padding: 5% 0 15px;
-    min-height: 30px;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    gap: 20px;
-    flex-grow: 1;
-}
-
-main > section#Third > div {
-    text-align: center;
-}
-
-main > section#Third > div > a {
-    font-size: 30px;
-}
-
-main > section#Third > div > a:hover {
-    color: #a1a1a1;
-}
-
 a {
     text-decoration: none;
+}
+
+main > section#Third {
+    padding: 10px 0;
+    position: relative;
+}
+
+main > section#Third > a {
+    font-size: 30px;
+    font-weight: 600;
+    transform: translateY(0);
+    position: relative;
+    transition: all .5s ease-in;
+}
+
+main > section#Third > a.animate {
+    transform: translateY(-5px);
+} 
+
+main > section#Third > span {
+    transition: all .5s ease-in;
+    display: block;
+    opacity: 0;
+    width: max-content;
+    position: absolute;
+    bottom: 35%;
+    font-size: 10px;
+    border-radius: 5px;
+    border: 1.5px solid #fff;
+    padding: 2px 5px;
+
+}
+
+main > section#Third > span#id_3 {
+    left: -45px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+main > section#Third > span#id_4 {
+    left: 35px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 0;
+    border-left: 0;
 }
 
 @media (min-width: 800px) {
