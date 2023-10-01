@@ -26,7 +26,7 @@ const inputSearch = document.querySelector("[type='search']")
 
 inputSearch.oninput = () => {
     ul.innerHTML = ""
-
+    div_inputs.innerHTML = ""
     conv
         .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
         .forEach(item => addHTML(item))
