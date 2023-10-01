@@ -1,24 +1,54 @@
-main > section#Third {
+.bgImage {
+    background-repeat:no-repeat;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+
+    background-image: url(../images/background.jpg);
+    height: 100vh;
+    width: 100%;
+    filter: brightness(50%);
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    height: 100vh;
+}
+
+main > section {
     /* flex-grow: .3; */
     width: 100%;
-    padding: 5% 0 15px;
+    height: 100%;
+    /* padding: 5% 0 15px; */
     min-height: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    gap: 20px;
+    align-items: center;
+    gap: 25px;
     flex-grow: 1;
 }
 
-main > section#Third > div {
+main > section> div {
     text-align: center;
 }
 
-main > section#Third > div > a {
-    font-size: 30px;
+main > section > div > a {
+    font-size: 60px !important;
 }
 
-main > section#Third > div > a:hover {
+main > section > div > p {
+    font-size: 1.2em;
+    width: max-content;
+    text-align: center;
+}
+
+main > section > div > a:hover {
     color: #a1a1a1;
 }
 

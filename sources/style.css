@@ -223,6 +223,7 @@ main > section#Third > span#id_4 {
     main::after {
         content: 'Abra o convite pelo celular';
         position: absolute;
+        top: 0;
         width: 100%;
         height: 100%;
         z-index: 100;

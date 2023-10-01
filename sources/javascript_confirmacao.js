@@ -28,7 +28,7 @@ inputSearch.oninput = () => {
     ul.innerHTML = ""
 
     conv
-        .filter(item => item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
+        .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
         .forEach(item => addHTML(item))
 
 }
