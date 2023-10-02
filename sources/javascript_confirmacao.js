@@ -23,10 +23,16 @@ fetch("./convidados.json")
 
 const ul = document.querySelector("ul")
 const inputSearch = document.querySelector("[type='search']")
+const div_inputs = document.querySelector("[inputs]")
+const div_convites = document.querySelector("div.convites")
+const form = document.querySelector("form")
 
 inputSearch.oninput = () => {
     ul.innerHTML = ""
-    div_inputs.innerHTML = ""
+    div_convites.innerHTML = ""
+    form.innerHTML = ""
+    
+    console.log("1")
     conv
         .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
         .forEach(item => addHTML(item))
@@ -44,10 +50,6 @@ function addHTML(item) {
     li.append(a)
     ul.append(li)
 }
-
-const div_inputs = document.querySelector("[inputs]")
-const div_convites = document.querySelector("div.convites")
-const form = document.querySelector("form")
 
 function convidados(ele) {
     div_convites.innerHTML = ""
