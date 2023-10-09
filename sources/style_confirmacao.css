@@ -45,16 +45,19 @@ main > ul {
 
 ul > li {
     list-style-type: decimal;
-    display: flex;
+    margin: 5px 0 5px 10px;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     width: max-content;
 }
 
 li > a {
     padding: 5px 3px;
-    text-decoration: underline;
-    color: rgb(243, 170, 102);
+    /* text-decoration: underline; */
+    color: #fff;
+    font-weight: bolder;
+    font-size: 15px;
 }
 
 li > span {
