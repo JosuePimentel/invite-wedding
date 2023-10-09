@@ -1,5 +1,5 @@
 Swal.fire({
-    title: "Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique no seu nome.\nPasso 3: Insira o nome e pelo menos um sobrenome dos seus convidados.\nPasso 4: Clique em 'Confirmar!' para confirmar a sua presença e a de seus convidados.",
+    title: "Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique no seu nome.\nPasso 3: Verifique se seus convidados estão certos.\nPasso 4: Clique em 'Confirmar!' para confirmar a sua presença e a de seus convidados.",
     showClass: {
       popup: 'animate__animated animate__fadeInDown'
     },
@@ -31,8 +31,7 @@ inputSearch.oninput = () => {
     ul.innerHTML = ""
     div_convites.innerHTML = ""
     form.innerHTML = ""
-    
-    console.log("1")
+
     conv
         .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
         .forEach(item => addHTML(item))
@@ -58,23 +57,32 @@ function convidados(ele) {
     addHTML(ele)
 
     const p = document.createElement("p")
-    p.innerText = `Você tem ${ele.convites} convites:`
+    p.innerText = `Você tem ${ele.nconvidados} convites:`
     div_convites.append(p)
-    for( let i = 0 ; i < ele.convites ; i++ ) {
+    for( let i = 0 ; i < ele.nconvidados ; i++ ) {
             const span = document.createElement("span")
             span.classList.add("material-symbols-outlined")
             span.innerText = "local_activity"
             div_convites.append(span)
 
+            const div = document.createElement("div")
             const input = document.createElement("input")
-            input.setAttribute("type", "text")
-            input.setAttribute("name", i+1)
+            const span1 = document.createElement("span")
+            input.setAttribute("type", "checkbox")
+            input.setAttribute("checked", "true")
             input.setAttribute("id", i+1)
-            input.setAttribute("placeholder", `Convidado 0${i+1}`)
-            if(i == 0) {
-                input.value = ele.nome
+
+            if(i == ele.nconvidados-1) {
+                input.setAttribute("name", ele.nome)
+                span1.innerText = ele.nome
+            } else {
+                input.setAttribute("name", ele.convidados[i])
+                span1.innerText = ele.convidados[i]
             }
-            form.append(input)
+            div.append(input)
+            div.append(span1)
+            form.append(div)
+
     }
     const submit = document.createElement("input")
     submit.setAttribute("type", "submit")
@@ -101,17 +109,14 @@ function conf_whats(ele) {
     let str = "https://wa.me/5564981120169?text="
     let strCPY = ""
     let aux = 0
-    for( let i = 0 ; i < ele.convites ; i++ ) {
-        let val = document.getElementById(`${i+1}`).value
-        if(!val.includes(ele.nome)) {
-            if(i <= ele.convites-3) {
-                strCPY = strCPY.concat(val, ", ")
-            }else if(ele.convites == 2) {
-                strCPY = strCPY.concat(val)
-            }else {
-                strCPY = strCPY.concat(" e ", val)
-            }
-        } else aux++
+    for( let i = 0 ; i < ele.nconvidados ; i++ ) {
+        let val = document.getElementById(`${i+1}`)
+        if(val.checked) {
+            if(val.name == ele.nome)
+                aux++
+            else
+                strCPY = strCPY.concat(val.name, ", ")
+        }
     }
 
     if(aux) {
@@ -121,6 +126,7 @@ function conf_whats(ele) {
     }
 
     str = str.concat(strCPY)
+    console.log(str)
 
     setTimeout(() => {
         window.location.href = str

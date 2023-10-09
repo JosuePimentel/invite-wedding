@@ -78,7 +78,17 @@ div[inputs] > form {
     gap: 10px;
 }
 
-div[inputs] > form > input {
+div[inputs] > form > input[type="submit"] {
     padding: 5px;
     color: #000;
+}
+
+div[inputs] > form > div {
+    width: 100%;
+    padding: 5px 0 0;
+    text-align: left;
+}
+
+div[inputs] > form > div > span {
+    padding: 0 0 0 10px;
 }
