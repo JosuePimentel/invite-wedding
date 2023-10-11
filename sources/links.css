@@ -38,17 +38,35 @@ main > section> div {
     text-align: center;
 }
 
-main > section > div > a {
+main > section > div a {
     font-size: 60px !important;
 }
 
-main > section > div > p {
+main > section > div p {
     font-size: 1.2em;
     width: max-content;
     text-align: center;
 }
 
-main > section > div > a:hover {
+main > section > div a:hover {
     color: #a1a1a1;
 }
 
+div.two {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.two > div {
+    align-content: right;
+}
+
+div.two:nth-child(even) > div:first-child {
+    padding-right: 20px;
+}
+
+div.two:nth-child(odd) > div:first-child {
+    padding-right: 70px;
+}
