@@ -68,6 +68,12 @@ div[inputs] {
     /* padding: 20px; */
     display: none;
 }
+
+div[inputs] > div.convites > p{
+    font-size: 15px;
+    padding: 5px 0;
+}
+
 div[inputs].clicked {
     display: flex;
     flex-direction: column;
@@ -78,20 +84,26 @@ div[inputs].clicked {
 div[inputs] > form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+    padding-top: 10px;
 }
 
 div[inputs] > form > input[type="submit"] {
     padding: 5px;
     color: #000;
+    width: 150px;
 }
 
-div[inputs] > form > div {
+div[inputs] > form > p {
+    font-size: 15px;
+    text-align: center;
     width: 100%;
-    padding: 5px 0 0;
-    text-align: left;
 }
 
-div[inputs] > form > div > span {
-    padding: 0 0 0 10px;
+div[inputs] > p#lembrete {
+    padding-top: 30px;
+    font-size: 15px;
+    font-weight: 600;
 }

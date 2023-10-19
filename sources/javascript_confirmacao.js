@@ -28,9 +28,7 @@ const div_convites = document.querySelector("div.convites")
 const form = document.querySelector("form")
 
 inputSearch.oninput = () => {
-    ul.innerHTML = ""
-    div_convites.innerHTML = ""
-    form.innerHTML = ""
+    div_inputs.classList.remove("clicked")
 
     conv
         .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
@@ -54,10 +52,10 @@ function convidados(ele) {
     div_convites.innerHTML = ""
     form.innerHTML = ""
     ul.innerHTML = ""
-    addHTML(ele)
+    // addHTML(ele)
 
     const p = document.createElement("p")
-    p.innerText = `Você tem ${ele.nconvidados} convites:`
+    p.innerText = `${ele.nome} tem ${ele.nconvidados ? ele.nconvidados : "nenhum"} convites`
     div_convites.append(p)
     for( let i = 0 ; i < ele.nconvidados ; i++ ) {
             const span = document.createElement("span")
@@ -65,23 +63,10 @@ function convidados(ele) {
             span.innerText = "local_activity"
             div_convites.append(span)
 
-            const div = document.createElement("div")
-            const input = document.createElement("input")
-            const span1 = document.createElement("span")
-            input.setAttribute("type", "checkbox")
-            input.setAttribute("checked", "true")
-            input.setAttribute("id", i+1)
+            const p1 = document.createElement("p")
+            p1.innerText = `${i+1}. ${ele.convidados[i]}`
 
-            if(i == ele.nconvidados-1) {
-                input.setAttribute("name", ele.nome)
-                span1.innerText = ele.nome
-            } else {
-                input.setAttribute("name", ele.convidados[i])
-                span1.innerText = ele.convidados[i]
-            }
-            div.append(input)
-            div.append(span1)
-            form.append(div)
+            form.append(p1)
 
     }
     const submit = document.createElement("input")
@@ -108,27 +93,16 @@ function convidados(ele) {
 function conf_whats(ele) {
     let str = "https://wa.me/5564981120169?text="
     let strCPY = ""
-    let aux = 0
     for( let i = 0 ; i < ele.nconvidados ; i++ ) {
-        let val = document.getElementById(`${i+1}`)
-        if(val.checked) {
-            if(val.name == ele.nome)
-                aux++
-            else
-                strCPY = strCPY.concat(val.name, ", ")
-        }
+        strCPY = strCPY.concat(ele.convidados[i], ", ")
     }
 
-    if(aux) {
-        str = str.concat(`${ele.nome} confirmou a presença e levará consigo o(s) seguinte(s) convidado(s): `)
-    } else {
-        str = str.concat(`${ele.nome} não ira, mas confirmou a presença do(s) seguinte(s) convidado(s): `)
-    }
+    str = str.concat(`${ele.nome} confirmou a presença e levará consigo o(s) seguinte(s) convidado(s): `)
 
     str = str.concat(strCPY)
-    console.log(str)
 
     setTimeout(() => {
+        div_inputs.classList.remove("clicked")
         window.location.href = str
     }, 5050);
 }
