@@ -28,9 +28,7 @@ const div_convites = document.querySelector("div.convites")
 const form = document.querySelector("form")
 
 inputSearch.oninput = () => {
-    ul.innerHTML = ""
-    div_convites.innerHTML = ""
-    form.innerHTML = ""
+    div_inputs.classList.remove("clicked")
 
     conv
         .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))

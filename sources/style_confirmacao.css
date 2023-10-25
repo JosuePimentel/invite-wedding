@@ -95,3 +95,9 @@ div[inputs] > form > div {
 div[inputs] > form > div > span {
     padding: 0 0 0 10px;
 }
+
+div[inputs] > p {
+    padding: 30px 0 0;
+    font-size: 15px;
+    font-weight: bolder;
+}
