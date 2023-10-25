@@ -16,7 +16,6 @@ fetch("./convidados.json")
     })
     .then(jsondata => {
         jsondata.forEach(ele => {
-            // addHTML(ele)
             conv.push(ele)
         })
     })
@@ -29,6 +28,7 @@ const form = document.querySelector("form")
 
 inputSearch.oninput = () => {
     div_inputs.classList.remove("clicked")
+    ul.innerHTML = ''
 
     conv
         .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
@@ -41,9 +41,7 @@ function addHTML(item) {
     const a = document.createElement("a")
     a.setAttribute("index", item.index)
     a.innerText = item.nome
-    a.addEventListener("click", e => {
-        convidados(item)
-    })
+    a.addEventListener("click", e => convidados(item))
     li.append(a)
     ul.append(li)
 }
