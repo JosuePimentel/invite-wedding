@@ -1,10 +1,10 @@
 Swal.fire({
     title: "Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique no seu nome.\nPasso 3: Verifique se seus convidados estão certos.\nPasso 4: Clique em 'Confirmar!' para confirmar a sua presença e a de seus convidados.",
     showClass: {
-      popup: 'animate__animated animate__fadeInDown'
+        popup: 'animate__animated animate__fadeInDown'
     },
     hideClass: {
-      popup: 'animate__animated animate__fadeOutUp'
+        popup: 'animate__animated animate__fadeOutUp'
     }
 })
 
@@ -32,7 +32,10 @@ inputSearch.oninput = () => {
 
     conv
         .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
-        .forEach(item => addHTML(item))
+        .forEach(item => {
+            if(item.enable)
+                addHTML(item)
+        })
 
 }
 
@@ -55,29 +58,29 @@ function convidados(ele) {
     const p = document.createElement("p")
     p.innerText = `Você tem ${ele.nconvidados} convites:`
     div_convites.append(p)
-    for( let i = 0 ; i < ele.nconvidados ; i++ ) {
-            const span = document.createElement("span")
-            span.classList.add("material-symbols-outlined")
-            span.innerText = "local_activity"
-            div_convites.append(span)
+    for (let i = 0; i < ele.nconvidados; i++) {
+        const span = document.createElement("span")
+        span.classList.add("material-symbols-outlined")
+        span.innerText = "local_activity"
+        div_convites.append(span)
 
-            const div = document.createElement("div")
-            const input = document.createElement("input")
-            const span1 = document.createElement("span")
-            input.setAttribute("type", "checkbox")
-            input.setAttribute("checked", "true")
-            input.setAttribute("id", i+1)
+        const div = document.createElement("div")
+        const input = document.createElement("input")
+        const span1 = document.createElement("span")
+        input.setAttribute("type", "checkbox")
+        input.setAttribute("checked", "true")
+        input.setAttribute("id", i + 1)
 
-            if(i == ele.nconvidados-1) {
-                input.setAttribute("name", ele.nome)
-                span1.innerText = ele.nome
-            } else {
-                input.setAttribute("name", ele.convidados[i])
-                span1.innerText = ele.convidados[i]
-            }
-            div.append(input)
-            div.append(span1)
-            form.append(div)
+        if (i == ele.nconvidados - 1) {
+            input.setAttribute("name", ele.nome)
+            span1.innerText = ele.nome
+        } else {
+            input.setAttribute("name", ele.convidados[i])
+            span1.innerText = ele.convidados[i]
+        }
+        div.append(input)
+        div.append(span1)
+        form.append(div)
 
     }
     const submit = document.createElement("input")
@@ -91,7 +94,7 @@ function convidados(ele) {
             title: 'Presença confirmada com sucesso.\n\nVocê sera redirecionado ao whatsapp em segundos!',
             showConfirmButton: false,
             timer: 5000
-          })
+        })
 
         conf_whats(ele)
     })
@@ -105,17 +108,17 @@ function conf_whats(ele) {
     let str = "https://wa.me/5564981120169?text="
     let strCPY = ""
     let aux = 0
-    for( let i = 0 ; i < ele.nconvidados ; i++ ) {
-        let val = document.getElementById(`${i+1}`)
-        if(val.checked) {
-            if(val.name == ele.nome)
+    for (let i = 0; i < ele.nconvidados; i++) {
+        let val = document.getElementById(`${i + 1}`)
+        if (val.checked) {
+            if (val.name == ele.nome)
                 aux++
             else
                 strCPY = strCPY.concat(val.name, ", ")
         }
     }
 
-    if(aux) {
+    if (aux) {
         str = str.concat(`${ele.nome} confirmou a presença e levará consigo o(s) seguinte(s) convidado(s): `)
     } else {
         str = str.concat(`${ele.nome} não ira, mas confirmou a presença do(s) seguinte(s) convidado(s): `)
