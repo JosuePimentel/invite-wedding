@@ -514,7 +514,7 @@
     "enable": true
   },
   {
-    "nome": "Jonas Pimentel",
+    "nome": "Jonas Felicio Pimentel",
     "nconvidados": 2,
     "convidados": [
       "Janai Ribeiro Pimentel"
@@ -560,9 +560,9 @@
   },
   {
     "nome": "Michael Douglas Borges",
-    "nconvidados": 5,
+    "nconvidados": 4,
     "convidados": [
-      "Elanã F. G. Borges",
+      "Elanã Farias Gomes Borges",
       "Vitória Gomes Borges",
       "André Gomes Borges"
     ],
@@ -621,31 +621,34 @@
   },
   {
     "nome": "Pr Gideao Marinho",
-    "nconvidados": 3,
+    "nconvidados": 4,
     "convidados": [
       "Mirian Gonçalves",
-      "Micaias Marinho"
+      "Micaias Marinho",
+      "Miriane Guimarães"
     ],
     "index": 68,
     "enable": true
   },
   {
     "nome": "Pr Heleno Vieira da Silva",
-    "nconvidados": 5,
+    "nconvidados": 6,
     "convidados": [
       "Elany Gisely Carbone Vieira",
       "Lucas Carbone Vieira",
       "Sara Carbone Vieira",
-      "Divina Pereira"
+      "Divina Pereira",
+      "Hatus Gabriel Tavares de Souza"
     ],
     "index": 69,
     "enable": true
   },
   {
     "nome": "Claudio Gomes Pereira",
-    "nconvidados": 2,
+    "nconvidados": 3,
     "convidados": [
-      "Vanderlina Alves de Oliveira Pereira"
+      "Vanderlina Alves de Oliveira Pereira",
+      "Walifer Gomes de oliveira"
     ],
     "index": 70,
     "enable": true
@@ -735,7 +738,7 @@
     "enable": true
   },
   {
-    "nome": "Pr Antonio Gomes",
+    "nome": "Pr Antonio Pereira Gomes",
     "nconvidados": 2,
     "convidados": [
       "Dalvina Farias Pereira Gomes"
