@@ -125,7 +125,6 @@ function conf_whats(ele) {
     }
 
     str = str.concat(strCPY)
-    console.log(str)
 
     setTimeout(() => {
         window.location.href = str

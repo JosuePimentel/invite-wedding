@@ -280,14 +280,14 @@
       "Eduardo"
     ],
     "index": 30,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Natalia",
     "nconvidados": 1,
     "convidados": [],
     "index": 31,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Thalita",
@@ -309,7 +309,7 @@
       "Mãe"
     ],
     "index": 33,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Igor",
