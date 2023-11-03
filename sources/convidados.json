@@ -785,22 +785,19 @@
   },
   {
     "nome": "Jesse Moises Pereira",
-    "nconvidados": 5,
+    "nconvidados": 2,
     "convidados": [
-      "Judite Plens",
-      "Josiel Plens Pereira",
-      "Noabia Pereira",
-      "Joel Pereira"
+      "Judite Plens"
     ],
     "index": 85,
     "enable": true
   },
   {
-    "nome": "Josiel Plens Pereira",
+    "nome": "Paulo Soares e Familia",
     "nconvidados": 1,
     "convidados": [],
     "index": 86,
-    "enable": false
+    "enable": true
   },
   {
     "nome": "Joel Pereira",
@@ -837,7 +834,7 @@
     "nome": "Pr Samuel Guimarães Faria",
     "nconvidados": 4,
     "convidados": [
-      "Milcar Farias Guimarães",
+      "Milca Farias Guimarães",
       "Andre Farias Guimarães",
       "Raissa Farias Guimarães"
     ],
