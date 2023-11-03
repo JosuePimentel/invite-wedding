@@ -37,6 +37,10 @@ main > div > input {
     color: #aaa;
 }
 
+main > div > label{
+    font-size: 15px;
+}
+
 main > ul {
     display: flex;
     flex-direction: column;
@@ -68,6 +72,11 @@ div[inputs] {
     /* padding: 20px; */
     display: none;
 }
+
+div[inputs] > div.convites > p {
+    font-size: 15px;
+}
+
 div[inputs].clicked {
     display: flex;
     flex-direction: column;
