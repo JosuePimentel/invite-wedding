@@ -520,7 +520,7 @@
       "Janai Ribeiro Pimentel"
     ],
     "index": 57,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Raythirie Lopes Soares",
@@ -536,7 +536,7 @@
     "nconvidados": 1,
     "convidados": [],
     "index": 59,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Aroldo Alves Soares",
@@ -1080,6 +1080,13 @@
       "Louise Guimarães Barbosa"
     ],
     "index": 115,
+    "enable": true
+  },
+  {
+    "nome": "Samuel José",
+    "nconvidados": 2,
+    "convidados": [],
+    "index": 116,
     "enable": true
   }
 ]
