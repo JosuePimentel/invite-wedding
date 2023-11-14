@@ -446,7 +446,7 @@
       "Laura Sophia Alves Soares"
     ],
     "index": 48,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Francisca Soares e familia",
@@ -760,7 +760,7 @@
     "nconvidados": 1,
     "convidados": [],
     "index": 82,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "José Ailton",
@@ -770,7 +770,7 @@
       "Pedro Henrique"
     ],
     "index": 83,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Jairo Moises Pereira",
@@ -926,7 +926,7 @@
     "nconvidados": 1,
     "convidados": [],
     "index": 99,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Nilda Oliveira Paiva",
@@ -976,7 +976,7 @@
     "nconvidados": 1,
     "convidados": [],
     "index": 105,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Vanderley Vieira dos Santos",
