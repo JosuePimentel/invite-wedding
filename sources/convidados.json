@@ -371,7 +371,7 @@
     "nconvidados": 1,
     "convidados": [],
     "index": 40,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Ezequiel Afonso Farias",
@@ -585,7 +585,7 @@
       "Neusa Maria Patricio"
     ],
     "index": 64,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Rhander Marcelo Jesus Assis",
@@ -919,7 +919,7 @@
       "Patricia Gouveia"
     ],
     "index": 98,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Carmem de Freitas",
@@ -980,9 +980,8 @@
   },
   {
     "nome": "Vanderley Vieira dos Santos",
-    "nconvidados": 6,
+    "nconvidados": 5,
     "convidados": [
-      "Noemia Macedo Gomes Santos",
       "Jonas Macedo dos Santos",
       "Eliseu Macedo dos Santos",
       "Isaque Macedo dos Santos",
@@ -1084,9 +1083,9 @@
   },
   {
     "nome": "Samuel José",
-    "nconvidados": 2,
+    "nconvidados": 1,
     "convidados": [],
     "index": 116,
-    "enable": true
+    "enable": false  
   }
 ]
