@@ -158,7 +158,7 @@
       "Felipe"
     ],
     "index": 17,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Edilson Ribeiro",
@@ -319,11 +319,13 @@
     "enable": true
   },
   {
-    "nome": "Gabriel",
-    "nconvidados": 3,
+    "nome": "Gabriel Fernandes",
+    "nconvidados": 5,
     "convidados": [
       "Pai",
-      "Mãe"
+      "Mãe",
+      "Ana clara",
+      "Hevelyn"
     ],
     "index": 35,
     "enable": true
@@ -1132,8 +1134,8 @@
   },
   {
     "nome": "Ir Antônio",
-    "nconvidados": 3,
-    "convidados": ["Gisele", "Yuri"],
+    "nconvidados": 4,
+    "convidados": ["Gisele", "Yuri", "Giselma"],
     "index": 123,
     "enable": true  
   },
@@ -1142,6 +1144,13 @@
     "nconvidados": 7,
     "convidados": ["Mãe", "Pai", "Irineu", "Zaqueu", "Arão", "Ester"],
     "index": 124,
+    "enable": true  
+  },
+  {
+    "nome": "Jhon",
+    "nconvidados": 1,
+    "convidados": [],
+    "index": 125,
     "enable": true  
   }
 ]
