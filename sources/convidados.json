@@ -328,7 +328,7 @@
       "Hevelyn"
     ],
     "index": 35,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "João Lucas",
@@ -1150,6 +1150,20 @@
     "nome": "Jhon",
     "nconvidados": 1,
     "convidados": [],
+    "index": 125,
+    "enable": true  
+  },
+  {
+    "nome": "Edilene Dias Gonçalves Alvarenga",
+    "nconvidados": 1,
+    "convidados": [],
+    "index": 126,
+    "enable": true  
+  },
+  {
+    "nome": "Daniel Lobleim",
+    "nconvidados": 3,
+    "convidados": ["Nazaré Afonso Lobleim", "Oscar Lobleim"],
     "index": 125,
     "enable": true  
   }
