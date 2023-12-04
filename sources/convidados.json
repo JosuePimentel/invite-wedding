@@ -619,7 +619,7 @@
       "Isaque Borges Freitas"
     ],
     "index": 67,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Pr Gideao Marinho",
@@ -711,11 +711,12 @@
   },
   {
     "nome": "Aluisio Feitosa Fernandes",
-    "nconvidados": 4,
+    "nconvidados": 5,
     "convidados": [
       "Ester Farias Fernandes",
       "Vitória Fernandes",
-      "Carlos Aluisio Fernandes"
+      "Carlos Aluisio Fernandes",
+      "Daniel Lobleim"
     ],
     "index": 77,
     "enable": true
@@ -1158,13 +1159,6 @@
     "nconvidados": 1,
     "convidados": [],
     "index": 126,
-    "enable": true  
-  },
-  {
-    "nome": "Daniel Lobleim",
-    "nconvidados": 3,
-    "convidados": ["Nazaré Afonso Lobleim", "Oscar Lobleim"],
-    "index": 125,
     "enable": true  
   }
 ]
