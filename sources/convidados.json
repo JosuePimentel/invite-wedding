@@ -167,7 +167,8 @@
       "Esposa",
       "Hellen"
     ],
-    "index": 18
+    "index": 18,
+    "enable": true
   },
   {
     "nome": "Mirian Borges",
@@ -793,7 +794,7 @@
       "Judite Plens"
     ],
     "index": 85,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Paulo Soares e Familia",
@@ -860,7 +861,7 @@
       "Ana Claúdia Chaves"
     ],
     "index": 92,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Adriel Farias Gomes",
@@ -1022,7 +1023,7 @@
       "Ana Guimarães"
     ],
     "index": 109,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Mauro Magalhães",
@@ -1160,5 +1161,61 @@
     "convidados": [],
     "index": 126,
     "enable": true  
+  },
+  {
+    "nome": "Edilson Ribeiro da Silva e familia",
+    "nconvidados": 4,
+    "convidados": ["convidado 01", "convidado 02", "convidado 03"],
+    "index": 127,
+    "enable": true  
+  },
+  {
+    "nome": "Miguel Ribeiro da Silva e familia",
+    "nconvidados": 4,
+    "convidados": ["convidado 01", "convidado 02", "convidado 03"],
+    "index": 128,
+    "enable": true  
+  },
+  {
+    "nome": "Wilson Amaranto e familia",
+    "nconvidados": 3,
+    "convidados": ["convidado 01", "convidado 02"],
+    "index": 129,
+    "enable": true  
+  },
+  {
+    "nome": "Joana Maria Alpe e familia",
+    "nconvidados": 5,
+    "convidados": ["convidado 01", "convidado 02", "convidado 03", "convidado 04"],
+    "index": 130,
+    "enable": true  
+  },
+  {
+    "nome": "Elias Rodrigues de Souza e familia",
+    "nconvidados": 3,
+    "convidados": ["convidado 01", "convidado 02"],
+    "index": 131,
+    "enable": true  
+  },
+  {
+    "nome": "Camila Borges e familia",
+    "nconvidados": 4,
+    "convidados": ["convidado 01", "convidado 02", "convidado 03"],
+    "index": 131,
+    "enable": true  
+  },
+  {
+    "nome": "Jose Martins",
+    "nconvidados": 4,
+    "convidados": ["Keila Gomes Vidigal", "Sara Gomes Vidigal", "Abraao Gomes Vidigal"],
+    "index": 132,
+    "enable": true  
+  },
+  {
+    "nome": "Fabio Mota",
+    "nconvidados": 3,
+    "convidados": [ "Ester Gomes Vidigal", "Ana Lidia Mota Vidigal"],
+    "index": 133,
+    "enable": true
   }
 ]
