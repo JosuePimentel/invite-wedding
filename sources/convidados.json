@@ -1217,5 +1217,12 @@
     "convidados": [ "Ester Gomes Vidigal", "Ana Lidia Mota Vidigal"],
     "index": 134,
     "enable": true
+  },
+  {
+    "nome": "Rosana Alves",
+    "nconvidados": 1,
+    "convidados": [],
+    "index": 135,
+    "enable": true
   }
 ]
