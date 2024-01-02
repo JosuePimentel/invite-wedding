@@ -1228,7 +1228,7 @@
   {
     "nome": "Gisele Marie",
     "nconvidados": 3,
-    "convidados": ["Aline Marie, Karoline Marie"],
+    "convidados": ["Aline Marie", "Karoline Marie"],
     "index": 136,
     "enable": true
   },
@@ -1262,8 +1262,8 @@
   },
   {
     "nome": "Marcelo Silva",
-    "nconvidados": 1,
-    "convidados": [],
+    "nconvidados": 2,
+    "convidados": ["família"],
     "index": 141,
     "enable": true
   }
