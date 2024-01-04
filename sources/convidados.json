@@ -657,7 +657,7 @@
     "enable": true
   },
   {
-    "nome": "Pr Aderli Evangelista",
+    "nome": "Adely Evangelista Martins",
     "nconvidados": 2,
     "convidados": [
       "Rosana Guimarães Evangelista"
@@ -748,7 +748,7 @@
       "Dalvina Farias Pereira Gomes"
     ],
     "index": 80,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Mailon Bernard Rego",
@@ -937,7 +937,7 @@
     "nconvidados": 1,
     "convidados": [],
     "index": 100,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Eloene Alves Moraes",
@@ -1003,7 +1003,7 @@
       "Enriqueta Gonçalves"
     ],
     "index": 107,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Wander Soares Ferreira",
@@ -1033,7 +1033,7 @@
       "Eunice Magalhães"
     ],
     "index": 110,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Kleber Magalhães",
@@ -1273,7 +1273,7 @@
     "nconvidados": 2,
     "convidados": ["Marcos"],
     "index": 142,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Dagno Padilha Figueroa Ajala",
