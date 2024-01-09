@@ -403,7 +403,7 @@
       "Esdras Rodrigues Machado"
     ],
     "index": 43,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Sueli Soares",
@@ -708,7 +708,7 @@
       "Martha Borges de Moraes"
     ],
     "index": 76,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Aluisio Feitosa Fernandes",
@@ -882,7 +882,7 @@
       "Beatriz Gomes de Oliveira de Moraes"
     ],
     "index": 94,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Pedro Borges de Moraes",
@@ -904,7 +904,7 @@
       "Gabriela Ribeiro Marques"
     ],
     "index": 96,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Fabio Martins Gouvea",
@@ -1210,7 +1210,7 @@
     "nconvidados": 4,
     "convidados": ["Keila Gomes Vidigal", "Sara Gomes Vidigal", "Abraao Gomes Vidigal"],
     "index": 133,
-    "enable": true  
+    "enable": false  
   },
   {
     "nome": "Fabio Mota",
