@@ -663,7 +663,7 @@
       "Rosana Guimarães Evangelista"
     ],
     "index": 71,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "João Leandro Tavares",
@@ -953,7 +953,7 @@
       "Elisama Cruvinel"
     ],
     "index": 102,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Sebastião Cruvinel",
@@ -963,7 +963,7 @@
       "Sebastião Filho Cruvinel"
     ],
     "index": 103,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Gelson do Carmo",
@@ -1287,6 +1287,20 @@
     "nconvidados": 2,
     "convidados": ["Esposa"],
     "index": 144,
+    "enable": true
+  },
+  {
+    "nome": "Moisés Guimarães",
+    "nconvidados": 5,
+    "convidados": ["Núbia", "Josué", "Calebe", "Eliezer"],
+    "index": 145,
+    "enable": true
+  },
+  {
+    "nome": "Magno Padilha Figueroa Ajala",
+    "nconvidados": 4,
+    "convidados": ["Dayana Castedo Ferraz de Souza Ajala", "Ágatha Castedo Ferraz Ajala", "Jhonny Ferraz de Souza Ajala"],
+    "index": 146,
     "enable": true
   }
 ]
