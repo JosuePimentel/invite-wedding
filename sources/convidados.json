@@ -1245,7 +1245,7 @@
     "nconvidados": 2,
     "convidados": ["família"],
     "index": 138,
-    "enable": true
+    "enable": false
   },
   {
     "nome": "Fernanda Prieto",
@@ -1301,6 +1301,13 @@
     "nconvidados": 4,
     "convidados": ["Dayana Castedo Ferraz de Souza Ajala", "Ágatha Castedo Ferraz Ajala", "Jhonny Ferraz de Souza Ajala"],
     "index": 146,
+    "enable": true
+  },
+  {
+    "nome": "Juventino de Souza Ferreira",
+    "nconvidados": 2,
+    "convidados": ["Familia"],
+    "index": 147,
     "enable": true
   }
 ]
