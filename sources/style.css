@@ -1,6 +1,6 @@
 /* Mobile First */
 main {
-    min-height: 100vh;
+    min-height: 80vh;
 
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@ main.clicked {
     background-position: 50% 50%;
     z-index: 1;
 
-    background-image: url(../images/background2.jpg);
+    background-image: url(../images/background2.jpeg);
     height: 100vh;
     width: 100%;
     /* filter: brightness(50%); */
@@ -53,7 +53,7 @@ main.clicked {
 
 .bgImage.clicked {
     filter: brightness(50%);
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/background.jpeg);
 }
 
 .bgImage.clicked::after {
@@ -69,26 +69,27 @@ main > section#First {
     align-items: center;
 }
 
-main > section#First > p{
+main > section#First > p {
     padding: 0 30px;
-    font-size: 1.3em;
+    font-size: 1.5em;
     text-align: center;
     margin-bottom: 20px;
     font-family: 'Old Standard TT', sans-serif;
 }
 
+main > section#First > p#bodas {
+  font-size: 1.8em;
+}
+
 main > section#First > div {
     display: flex;
-    gap: 11px;
+    gap: 12px;
     align-items: center;
 }
 
-main > section#First > div > p {
-    line-height: 25px;
-}
-
-main > section#First > div > p:nth-child(1) {
-    text-align: right;
+main > section#First > div > span {
+    font-family: 'Great Vibes', sans-serif;
+    font-size: 2em;
 }
 
 main > section#Second {
@@ -98,28 +99,30 @@ main > section#Second {
     align-items: center;
 } 
 
-main > section#Second > p#id_1 {
-    font-size: 1.1em;
+main > section#Second > div#parents {
+  margin-bottom: 20px;
+    width: 100%;
+    padding: 0 30px;
+    justify-content: space-between;
+    display: flex;
+    gap: 20px;
 }
 
-main > section#Second > p#id_2 {
-    font-size: 1.3em; 
+main > section#Second > div#parents > p {
+  width: 150px;
 }
 
-main > section#Second > p#id_2,
-main > section#Second > p#id_1 {     
-    font-family: 'Old Standard TT', sans-serif;
+main > section#Second > div#parents > p:nth-child(2) {
+  text-align: end;
 }
 
-main > section#Second > p.noivos {
-    font-family: 'Great Vibes', sans-serif;
-    font-size: 5em;
-    padding: 0 20px;
+main > section#Second > div#parents > p:nth-child(2) {
+  text-align: end;
 }
 
 main > section#Second > div.date {
     width: 100%;
-    padding: 0 60px;
+    padding: 0 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
