@@ -103,6 +103,7 @@ main > section#Second > div#parents {
     width: 100%;
     padding: 0 30px;
     justify-content: space-between;
+    align-items: center;
     display: flex;
     gap: 20px;
 }
@@ -157,6 +158,7 @@ main > section#Second > div.date > p {
 main > section#Second > p.versiculo {
     margin: 20px 40px;
     text-align: justify;
+    word-spacing: 5px;
     font-size: 1.2em;
 }
 
