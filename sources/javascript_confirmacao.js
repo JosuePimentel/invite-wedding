@@ -10,13 +10,13 @@ Swal.fire({
 
 const conv = new Array
 
-fetch("./convidados.json")
+fetch("http://localhost:8080/guests/no-accepted")
     .then(response => {
         return response.json()
     })
     .then(jsondata => {
-        jsondata.forEach(ele => {
-            conv.push(ele)
+        jsondata.data.forEach(ele => {
+            conv.push(ele)  
         })
     })
 
@@ -31,9 +31,9 @@ inputSearch.oninput = () => {
     ul.innerHTML = ''
 
     conv
-        .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.nome.toLowerCase().includes(inputSearch.value.toLowerCase()))
+        .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.name.toLowerCase().includes(inputSearch.value.toLowerCase()))
         .forEach(item => {
-            if(item.enable)
+            if(!item.accepted)
                 addHTML(item)
         })
 
@@ -42,8 +42,8 @@ inputSearch.oninput = () => {
 function addHTML(item) {
     const li = document.createElement("li")
     const a = document.createElement("a")
-    a.setAttribute("index", item.index)
-    a.innerText = item.nome
+    a.setAttribute("index", item.id)
+    a.innerText = item.name
     a.addEventListener("click", e => convidados(item))
     li.append(a)
     ul.append(li)
@@ -53,12 +53,15 @@ function convidados(ele) {
     div_convites.innerHTML = ""
     form.innerHTML = ""
     ul.innerHTML = ""
+
+    const convidados = eval(ele.guests);
+
     addHTML(ele)
 
     const p = document.createElement("p")
-    p.innerText = `Você tem ${ele.nconvidados} convites:`
+    p.innerText = `Você tem ${convidados.length} convites:`
     div_convites.append(p)
-    for (let i = 0; i < ele.nconvidados; i++) {
+    for (let i = 0; i <= convidados.length; i++) {
         const span = document.createElement("span")
         span.classList.add("material-symbols-outlined")
         span.innerText = "local_activity"
@@ -71,12 +74,12 @@ function convidados(ele) {
         input.setAttribute("checked", "true")
         input.setAttribute("id", i + 1)
 
-        if (i == ele.nconvidados - 1) {
-            input.setAttribute("name", ele.nome)
-            span1.innerText = ele.nome
+        if (i == convidados.length) {
+            input.setAttribute("name", ele.name)
+            span1.innerText = ele.name
         } else {
-            input.setAttribute("name", ele.convidados[i])
-            span1.innerText = ele.convidados[i]
+            input.setAttribute("name", convidados[i])
+            span1.innerText = convidados[i]
         }
         div.append(input)
         div.append(span1)
@@ -96,37 +99,9 @@ function convidados(ele) {
             timer: 5000
         })
 
-        conf_whats(ele)
+        fetch(`http://localhost:8080/guests/accept-invite/${ele.id}`, { method: 'post' })
+
     })
     form.append(submit)
     div_inputs.classList.add("clicked")
-}
-
-// https://wa.me/5564981721535?text=
-
-function conf_whats(ele) {
-    let str = "https://wa.me/5564981120169?text="
-    let strCPY = ""
-    let aux = 0
-    for (let i = 0; i < ele.nconvidados; i++) {
-        let val = document.getElementById(`${i + 1}`)
-        if (val.checked) {
-            if (val.name == ele.nome)
-                aux++
-            else
-                strCPY = strCPY.concat(val.name, ", ")
-        }
-    }
-
-    if (aux) {
-        str = str.concat(`${ele.nome} confirmou a presença e levará consigo o(s) seguinte(s) convidado(s): `)
-    } else {
-        str = str.concat(`${ele.nome} não ira, mas confirmou a presença do(s) seguinte(s) convidado(s): `)
-    }
-
-    str = str.concat(strCPY)
-
-    setTimeout(() => {
-        window.location.href = str
-    }, 5050);
 }

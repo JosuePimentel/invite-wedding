@@ -100,7 +100,6 @@ main > section#Second {
 } 
 
 main > section#Second > div#parents {
-  margin-bottom: 20px;
     width: 100%;
     padding: 0 30px;
     justify-content: space-between;
