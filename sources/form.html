@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      width: 100vw;
+      height: 100dvh;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-color: #333;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 100%;
+      min-height: 100%;
+      padding: 20px;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+    }
+
+    form > .item {
+      width: 100%;
+      min-width: 200px;
+      max-width:250px;
+    }
+
+    .button {
+      width: 100%;
+      padding: 5px 15px;
+      border-radius: 3px;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 5px 15px;
+    }
+
+  </style>
+</head>
+<body>
+  <form action="">
+    <h1>Registrar convidado</h1>
+    <div class="item">
+      <span class="label">Nome: </span>
+      <input type="text" name="" id="" class="name">
+    </div>
+    <div class="item">
+      <span class="label">Convidados:</span>
+      <input type="text" class="guests">
+    </div>
+    <div class="item">
+      <div class="button">
+        Enviar
+      </div>
+    </div>
+  </form>
+</body>
+<script>
+  document.querySelector('.button').addEventListener('click', () => {
+    const guests = document.querySelector('.guests').value
+    const payload = {
+      "name": document.querySelector('.name').value,
+      "guests": `[${guests.split(',').map(e => `'${e.trim()}'`)}]`
+    }
+    fetch('http://localhost:8080/guests', { method: 'post', body: JSON.stringify(payload), headers: { 'Content-Type': 'application/json' },  })
+  })
+</script>
+</html>

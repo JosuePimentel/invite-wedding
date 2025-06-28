@@ -1,5 +1,5 @@
 Swal.fire({
-    title: "Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique no seu nome.\nPasso 3: Verifique se seus convidados estão certos.\nPasso 4: Clique em 'Confirmar!' para confirmar a sua presença e a de seus convidados.",
+    title: "Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique no seu nome.\nPasso 3: Clique em 'Confirmar!' para confirmar a sua presença e a de seus convidados.",
     showClass: {
         popup: 'animate__animated animate__fadeInDown'
     },
@@ -68,20 +68,13 @@ function convidados(ele) {
         div_convites.append(span)
 
         const div = document.createElement("div")
-        const input = document.createElement("input")
         const span1 = document.createElement("span")
-        input.setAttribute("type", "checkbox")
-        input.setAttribute("checked", "true")
-        input.setAttribute("id", i + 1)
 
         if (i == convidados.length) {
-            input.setAttribute("name", ele.name)
             span1.innerText = ele.name
         } else {
-            input.setAttribute("name", convidados[i])
             span1.innerText = convidados[i]
         }
-        div.append(input)
         div.append(span1)
         form.append(div)
 
@@ -94,7 +87,7 @@ function convidados(ele) {
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Presença confirmada com sucesso.\n\nVocê sera redirecionado ao whatsapp em segundos!',
+            title: 'Presença confirmada com sucesso!!',
             showConfirmButton: false,
             timer: 5000
         })
