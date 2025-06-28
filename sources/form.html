@@ -72,13 +72,20 @@
   </form>
 </body>
 <script>
-  document.querySelector('.button').addEventListener('click', () => {
+  const btn = document.querySelector('.button')
+  btn.addEventListener('click', () => {
     const guests = document.querySelector('.guests').value
-    const payload = {
-      "name": document.querySelector('.name').value,
-      "guests": `[${guests.split(',').map(e => `'${e.trim()}'`)}]`
+    const name = document.querySelector('.name').value
+
+    if(guests.length && name.length) {
+      const payload = {
+        "name": document.querySelector('.name').value,
+        "guests": `[${guests.split(',').map(e => `'${e.trim()}'`)}]`
+      }
+      fetch('https://invite-wedding-api.onrender.com/guests', { method: 'post', body: JSON.stringify(payload), headers: { 'Content-Type': 'application/json' },  })
+
+      window.location.reload()
     }
-    fetch('https://invite-wedding-api.onrender.com/guests', { method: 'post', body: JSON.stringify(payload), headers: { 'Content-Type': 'application/json' },  })
   })
 </script>
 </html>
