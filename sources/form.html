@@ -78,7 +78,7 @@
       "name": document.querySelector('.name').value,
       "guests": `[${guests.split(',').map(e => `'${e.trim()}'`)}]`
     }
-    fetch('http://localhost:8080/guests', { method: 'post', body: JSON.stringify(payload), headers: { 'Content-Type': 'application/json' },  })
+    fetch('https://invite-wedding-api.onrender.com/guests', { method: 'post', body: JSON.stringify(payload), headers: { 'Content-Type': 'application/json' },  })
   })
 </script>
 </html>

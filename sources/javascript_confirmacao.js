@@ -10,7 +10,7 @@ Swal.fire({
 
 const conv = new Array
 
-fetch("http://localhost:8080/guests/no-accepted")
+fetch("https://invite-wedding-api.onrender.com/guests/no-accepted")
     .then(response => {
         return response.json()
     })
@@ -92,7 +92,7 @@ function convidados(ele) {
             timer: 5000
         })
 
-        fetch(`http://localhost:8080/guests/accept-invite/${ele.id}`, { method: 'post' })
+        fetch(`https://invite-wedding-api.onrender.com/guests/accept-invite/${ele.id}`, { method: 'post' })
 
     })
     form.append(submit)
