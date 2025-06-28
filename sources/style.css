@@ -156,9 +156,10 @@ main > section#Second > div.date > p {
 }
 
 main > section#Second > p.versiculo {
+    text-indent: 30px;
     margin: 20px 40px;
     text-align: justify;
-    word-spacing: 5px;
+    word-spacing: -0px;
     font-size: 1.2em;
 }
 
