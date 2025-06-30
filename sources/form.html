@@ -74,17 +74,19 @@
 <script>
   const btn = document.querySelector('.button')
   btn.addEventListener('click', () => {
-    const guests = document.querySelector('.guests').value
+    const guests = document.querySelector('.guests').value ?? ' '
     const name = document.querySelector('.name').value
 
-    if(guests.length && name.length) {
+    if(name.length) {
       const payload = {
         "name": document.querySelector('.name').value,
         "guests": `[${guests.split(',').map(e => `'${e.trim()}'`)}]`
       }
       fetch('https://invite-wedding-api.onrender.com/guests', { method: 'post', body: JSON.stringify(payload), headers: { 'Content-Type': 'application/json' },  })
 
-      window.location.reload()
+      setTimeout(() => {
+        window.location.reload()
+      }, 500)
     }
   })
 </script>
