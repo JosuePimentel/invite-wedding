@@ -105,3 +105,8 @@ div[inputs] > form > div > span {
     padding: 0 0 0 10px;
     font-size: 20px;
 }
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}

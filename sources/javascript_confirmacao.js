@@ -10,7 +10,7 @@ Swal.fire({
 
 const conv = new Array
 
-fetch("https://invite-wedding-api.onrender.com/guests/no-accepted")
+fetch("http://localhost:8080/guests/no-accepted")
     .then(response => {
         return response.json()
     })
@@ -59,25 +59,26 @@ function convidados(ele) {
     addHTML(ele)
 
     const p = document.createElement("p")
-    p.innerText = `Você tem ${convidados.length + 1} convites:`
+    p.innerText = `Você tem ${convidados.length} convites:`
     div_convites.append(p)
-    for (let i = 0; i <= convidados.length; i++) {
+    for (let i = 0; i < convidados.length; i++) {
+        const conv = convidados[i];
         const span = document.createElement("span")
         span.classList.add("material-symbols-outlined")
         span.innerText = "local_activity"
         div_convites.append(span)
 
         const div = document.createElement("div")
+        const checkbox = document.createElement("input")
+        checkbox.setAttribute('type', 'checkbox')
+        checkbox.classList.add('accept-invite')
+        checkbox.setAttribute('checked', 'true')
         const span1 = document.createElement("span")
+        span1.innerText = conv.slice(2, conv.length)
 
-        if (i == convidados.length) {
-            span1.innerText = ele.name
-        } else {
-            span1.innerText = convidados[i]
-        }
+        div.append(checkbox)
         div.append(span1)
         form.append(div)
-
     }
     const submit = document.createElement("input")
     submit.setAttribute("type", "submit")
@@ -91,8 +92,12 @@ function convidados(ele) {
             showConfirmButton: false,
             timer: 5000
         })
+        const guests = eval(ele.guests)
+        document.querySelectorAll('.accept-invite').forEach((input, index) => {
+          guests[index] = guests[index].replace('X', input.checked ? 'V' : 'X')
+        })
 
-        fetch(`https://invite-wedding-api.onrender.com/guests/accept-invite/${ele.id}`, { method: 'post' })
+        fetch(`http://localhost:8080/guests/accept-invite/${ele.id}`, { method: 'post', body: JSON.stringify({ guests: guests }), headers: { 'Content-Type': 'application/json' }, })
 
     })
     form.append(submit)
