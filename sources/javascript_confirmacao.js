@@ -59,7 +59,7 @@ function convidados(ele) {
     addHTML(ele)
 
     const p = document.createElement("p")
-    p.innerText = `Você tem ${convidados.length} convites:`
+    p.innerText = `Você tem ${convidados.length + 1} convites:`
     div_convites.append(p)
     for (let i = 0; i <= convidados.length; i++) {
         const span = document.createElement("span")
