@@ -10,7 +10,7 @@ Swal.fire({
 
 const conv = new Array
 
-fetch("http://localhost:8080/guests/no-accepted")
+fetch("https://invite-wedding-api.onrender.com/guests/no-accepted")
     .then(response => {
         return response.json()
     })
@@ -97,7 +97,7 @@ function convidados(ele) {
           guests[index] = guests[index].replace('X', input.checked ? 'V' : 'X')
         })
 
-        fetch(`http://localhost:8080/guests/accept-invite/${ele.id}`, { method: 'post', body: JSON.stringify({ guests: guests }), headers: { 'Content-Type': 'application/json' }, })
+        fetch(`https://invite-wedding-api.onrender.com/guests/accept-invite/${ele.id}`, { method: 'post', body: JSON.stringify({ guests: guests }), headers: { 'Content-Type': 'application/json' }, })
 
     })
     form.append(submit)
