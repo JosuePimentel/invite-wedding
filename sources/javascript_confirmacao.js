@@ -54,7 +54,8 @@ function convidados(ele) {
     form.innerHTML = ""
     ul.innerHTML = ""
 
-    const convidados = eval(ele.guests);
+    let convidados = eval(ele.guests);
+    convidados = convidados.filter(e => e?.length)
 
     addHTML(ele)
 
