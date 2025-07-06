@@ -83,20 +83,21 @@ function convidados(ele) {
     submit.setAttribute("value", "Confirmar!")
     submit.addEventListener('click', e => {
         e.preventDefault()
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Presença confirmada com sucesso!!',
-            showConfirmButton: false,
-            timer: 5000
-        })
-        const guests = eval(ele.guests)
+        let guests = eval(ele.guests)
+        guests = guests.filter(e => e?.length)
         document.querySelectorAll('.accept-invite').forEach((input, index) => {
           guests[index] = guests[index].replace('X', input.checked ? 'V' : 'X')
         })
 
         fetch(`https://invite-wedding-api.onrender.com/guests/accept-invite/${ele.id}`, { method: 'post', body: JSON.stringify({ guests: guests }), headers: { 'Content-Type': 'application/json' }, })
 
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Presença confirmada com sucesso!!',
+          showConfirmButton: false,
+          timer: 5000
+        }).then(() => window.location.href = 'https://invite-wedding-pi.vercel.app/')
     })
     form.append(submit)
     div_inputs.classList.add("clicked")
