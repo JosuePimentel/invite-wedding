@@ -32,10 +32,7 @@ inputSearch.oninput = () => {
 
     conv
         .filter(item => inputSearch.value.toLowerCase() == "" ? null : item.name.toLowerCase().includes(inputSearch.value.toLowerCase()))
-        .forEach(item => {
-            if(!item.accepted)
-                addHTML(item)
-        })
+        .forEach(item => { addHTML(item) })
 
 }
 
