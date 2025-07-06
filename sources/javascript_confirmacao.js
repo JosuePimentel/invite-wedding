@@ -61,6 +61,8 @@ function convidados(ele) {
     div_convites.append(p)
     for (let i = 0; i < convidados.length; i++) {
         const conv = convidados[i];
+        const isAccepted = conv[0] === 'V';
+
         const span = document.createElement("span")
         span.classList.add("material-symbols-outlined")
         span.innerText = "local_activity"
@@ -70,7 +72,11 @@ function convidados(ele) {
         const checkbox = document.createElement("input")
         checkbox.setAttribute('type', 'checkbox')
         checkbox.classList.add('accept-invite')
-        checkbox.setAttribute('checked', 'true')
+
+        if(isAccepted) {
+          checkbox.setAttribute('checked', 'true')
+        }
+
         const span1 = document.createElement("span")
         span1.innerText = conv.slice(2, conv.length)
 
@@ -86,7 +92,11 @@ function convidados(ele) {
         let guests = eval(ele.guests)
         guests = guests.filter(e => e?.length)
         document.querySelectorAll('.accept-invite').forEach((input, index) => {
-          guests[index] = guests[index].replace('X', input.checked ? 'V' : 'X')
+          if (guests[index][0] === 'V') {
+            guests[index] = guests[index].replace('V', input.checked ? 'V' : 'X')
+          } else {
+            guests[index] = guests[index].replace('X', input.checked ? 'V' : 'X')
+          }
         })
 
         fetch(`https://invite-wedding-api.onrender.com/guests/accept-invite/${ele.id}`, { method: 'post', body: JSON.stringify({ guests: guests }), headers: { 'Content-Type': 'application/json' }, })
