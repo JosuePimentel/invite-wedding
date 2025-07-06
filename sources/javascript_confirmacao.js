@@ -1,5 +1,5 @@
 Swal.fire({
-    title: "Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique no seu nome.\nPasso 3: Desmarque os convidados que não irão ao evento.\nPasso 4: Clique em 'Confirmar!' para confirmar a presença.",
+    title: "Passo 1: escreva o seu nome na caixa de texto.\nPasso 2: Clique no seu nome.\nPasso 3: Desmarque/Marque os convidados que não irão ao evento.\nPasso 4: Clique em 'Confirmar!' para confirmar a presença.",
     showClass: {
         popup: 'animate__animated animate__fadeInDown'
     },
